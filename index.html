@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2NFUTTS - Camisetas de Futebol Tailandesas</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            color: #333;
+        }
+        
+        header {
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+            color: white;
+            padding: 20px;
+            text-align: center;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.3);
+        }
+        
+        header h1 {
+            font-size: 2.5em;
+            margin-bottom: 5px;
+        }
+        
+        header p {
+            font-size: 1.1em;
+            opacity: 0.9;
+        }
+        
+        .hero {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 60px 20px;
+            text-align: center;
+        }
+        
+        .hero h2 {
+            font-size: 2.2em;
+            margin-bottom: 15px;
+        }
+        
+        .hero p {
+            font-size: 1.2em;
+            margin-bottom: 30px;
+        }
+        
+        .cta-button {
+            background: #ff6b6b;
+            color: white;
+            padding: 12px 30px;
+            border: none;
+            border-radius: 5px;
+            font-size: 1em;
+            cursor: pointer;
+            text-decoration: none;
+            display: inline-block;
+            transition: background 0.3s;
+        }
+        
+        .cta-button:hover {
+            background: #ee5a52;
+        }
+        
+        .products {
+            padding: 50px 20px;
+            background: #f9f9f9;
+        }
+        
+        .products h2 {
+            text-align: center;
+            margin-bottom: 40px;
+            font-size: 2em;
+            color: #1a1a2e;
+        }
+        
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .product-card {
+            background: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        
+        .product-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 4px 16px rgba(0,0,0,0.2);
+        }
+        
+        .product-image {
+            width: 100%;
+            height: 250px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 3em;
+        }
+        
+        .product-info {
+            padding: 20px;
+        }
+        
+        .product-name {
+            font-size: 1.3em;
+            margin-bottom: 10px;
+            color: #1a1a2e;
+        }
+        
+        .product-price {
+            font-size: 1.5em;
+            color: #ff6b6b;
+            font-weight: bold;
+            margin-bottom: 15px;
+        }
+        
+        .product-btn {
+            width: 100%;
+            padding: 10px;
+            background: #667eea;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1em;
+            transition: background 0.3s;
+        }
+        
+        .product-btn:hover {
+            background: #5568d3;
+        }
+        
+        .about {
+            padding: 50px 20px;
+            background: white;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .about h2 {
+            font-size: 2em;
+            margin-bottom: 30px;
+            color: #1a1a2e;
+        }
+        
+        .features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            margin-bottom: 30px;
+        }
+        
+        .feature {
+            text-align: center;
+            padding: 20px;
+        }
+        
+        .feature h3 {
+            color: #667eea;
+            margin-bottom: 10px;
+            font-size: 1.3em;
+        }
+        
+        .contact {
+            background: #1a1a2e;
+            color: white;
+            padding: 50px 20px;
+            text-align: center;
+        }
+        
+        .contact h2 {
+            margin-bottom: 30px;
+            font-size: 2em;
+        }
+        
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+            margin-bottom: 30px;
+        }
+        
+        .social-link {
+            display: inline-block;
+            padding: 12px 25px;
+            background: #667eea;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background 0.3s;
+            font-weight: bold;
+        }
+        
+        .social-link:hover {
+            background: #764ba2;
+        }
+        
+        footer {
+            background: #0f3460;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            font-size: 0.9em;
+        }
+        
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 1.8em;
+            }
+            
+            .hero h2 {
+                font-size: 1.6em;
+            }
+            
+            .products h2 {
+                font-size: 1.5em;
+            }
+            
+            .product-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>⚽ 2NFUTTS</h1>
+        <p>Camisetas de Futebol Tailandesas Premium</p>
+    </header>
+    
+    <section class="hero">
+        <h2>Qualidade Premium, Preço Acessível</h2>
+        <p>Camisetas tailandesas autênticas para os verdadeiros torcedores</p>
+        <a href="#products" class="cta-button">Ver Catálogo</a>
+    </section>
+    
+    <section class="products" id="products">
+        <h2>Nossos Produtos</h2>
+        <div class="product-grid">
+            <div class="product-card">
+                <div class="product-image">👕</div>
+                <div class="product-info">
+                    <div class="product-name">Camiseta Tailandesa Premium</div>
+                    <div class="product-price">R$ 79,90</div>
+                    <button class="product-btn" onclick="contact('Camiseta Premium - R$ 79,90')">Comprar no WhatsApp</button>
+                </div>
+            </div>
+            
+            <div class="product-card">
+                <div class="product-image">⚽</div>
+                <div class="product-info">
+                    <div class="product-name">Camiseta Tailandesa Deluxe</div>
+                    <div class="product-price">R$ 89,90</div>
+                    <button class="product-btn" onclick="contact('Camiseta Deluxe - R$ 89,90')">Comprar no WhatsApp</button>
+                </div>
+            </div>
+            
+            <div class="product-card">
+                <div class="product-image">🏆</div>
+                <div class="product-info">
+                    <div class="product-name">Camiseta Tailandesa Exclusiva</div>
+                    <div class="product-price">R$ 99,90</div>
+                    <button class="product-btn" onclick="contact('Camiseta Exclusiva - R$ 99,90')">Comprar no WhatsApp</button>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section class="about">
+        <h2>Por que 2NFUTTS?</h2>
+        <div class="features">
+            <div class="feature">
+                <h3>✨ Qualidade Premium</h3>
+                <p>Tecido de alta qualidade que dura anos. Confortável e durável.</p>
+            </div>
+            <div class="feature">
+                <h3>🚀 Entrega Rápida</h3>
+                <p>Despachamos em até 2 dias úteis. Receba sua camiseta rapidinho!</p>
+            </div>
+            <div class="feature">
+                <h3>🛡️ Garantia 100%</h3>
+                <p>Se não gostar, devolvemos seu dinheiro. Sem complicações.</p>
+            </div>
+            <div class="feature">
+                <h3>💬 Suporte 24/7</h3>
+                <p>Dúvidas? Fale conosco no WhatsApp, Instagram ou TikTok!</p>
+            </div>
+        </div>
+    </section>
+    
+    <section class="contact">
+        <h2>Vem Conversar com a Gente!</h2>
+        <p style="margin-bottom: 30px; font-size: 1.1em;">Escolha seu canal favorito</p>
+        <div class="social-links">
+            <a href="https://wa.me/5585988147889" class="social-link" target="_blank">💬 WhatsApp</a>
+            <a href="https://instagram.com/2nfutts" class="social-link" target="_blank">📸 Instagram</a>
+            <a href="https://tiktok.com/@2nfutts" class="social-link" target="_blank">🎵 TikTok</a>
+        </div>
+    </section>
+    
+    <footer>
+        <p>&copy; 2024 2NFUTTS - Todos os direitos reservados.</p>
+    </footer>
+    
+    <script>
+        function contact(product) {
+            const message = `Olá! Gostaria de comprar: ${product}`;
+            const encodedMessage = encodeURIComponent(message);
+            window.open(`https://wa.me/5585988147889?text=${encodedMessage}`, '_blank');
+        }
+    </script>
+</body>
+</html>
